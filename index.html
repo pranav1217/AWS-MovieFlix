@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MovieFlix | AWS Movie Streaming</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav>
+        <div class="logo">🎬 MovieFlix</div>
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Movies</a></li>
+            <li><a href="#">Trending</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="overlay">
+            <span class="badge">Now Streaming</span>
+            <h1>Watch Movie <span>Trailers</span></h1>
+            <p>Stream your favourite trailers directly from AWS S3.</p>
+            <div class="gold-divider"></div>
+        </div>
+    </section>
+
+    <!-- Search -->
+    <section class="search">
+        <input type="text" id="search" placeholder="Search movies, genres, ratings...">
+    </section>
+
+    <!-- Section Heading -->
+    <div class="section-heading">
+        <h2>Featured Films</h2>
+        <div class="line"></div>
+    </div>
+
+    <!-- Movies -->
+    <section class="movies">
+
+        <!-- Movie 1 -->
+        <div class="card">
+            <span class="genre-tag">Mythological</span>
+            <img src="https://movies-2026.s3.ap-south-1.amazonaws.com/aadi.jpg" alt="Adipurush">
+            <h2>Adipurush</h2>
+            <p>Mythological • Action • Adventure</p>
+            <span class="rating">⭐ 4.0 / 5</span>
+            <button onclick="openVideo('https://movies-2026.s3.ap-south-1.amazonaws.com/Adipurush.mp4')">
+                ▶ Watch Trailer
+            </button>
+        </div>
+
+        <!-- Movie 2 -->
+        <div class="card">
+            <span class="genre-tag">Historical</span>
+            <img src="https://movies-2026.s3.ap-south-1.amazonaws.com/bahu.jpg" alt="Baahubali">
+            <h2>Baahubali</h2>
+            <p>Historical • Action • Drama</p>
+            <span class="rating">⭐ 4.8 / 5</span>
+            <button onclick="openVideo('https://movies-2026.s3.ap-south-1.amazonaws.com/Baahubali.mp4')">
+                ▶ Watch Trailer
+            </button>
+        </div>
+
+        <!-- Movie 3 -->
+        <div class="card">
+            <span class="genre-tag">War • Drama</span>
+            <img src="https://movies-2026.s3.ap-south-1.amazonaws.com/chhava.jpg" alt="Chhaava">
+            <h2>Chhaava</h2>
+            <p>Historical • War • Drama</p>
+            <span class="rating">⭐ 4.7 / 5</span>
+            <button onclick="openVideo('https://movies-2026.s3.ap-south-1.amazonaws.com/Chhaava.mp4')">
+                ▶ Watch Trailer
+            </button>
+        </div>
+
+        <!-- Movie 4 -->
+        <div class="card">
+            <span class="genre-tag">Biography</span>
+            <img src="https://movies-2026.s3.ap-south-1.amazonaws.com/12th.png" alt="12th Fail">
+            <h2>12th Fail</h2>
+            <p>Biography • Drama • Inspirational</p>
+            <span class="rating">⭐ 4.9 / 5</span>
+            <button onclick="openVideo('https://movies-2026.s3.ap-south-1.amazonaws.com/12thFail.mp4')">
+                ▶ Watch Trailer
+            </button>
+        </div>
+
+        <!-- Movie 5 -->
+        <div class="card">
+            <span class="genre-tag">Romance</span>
+            <img src="https://movies-2026.s3.ap-south-1.amazonaws.com/hai.jpg" alt="Hai Jawani Toh Ishq Hona Hai">
+            <h2>Hai Jawani Toh Ishq Hona Hai</h2>
+            <p>Romance • Comedy • Musical</p>
+            <span class="rating">⭐ 4.4 / 5</span>
+            <button onclick="openVideo('https://movies-2026.s3.ap-south-1.amazonaws.com/HaiJawaniToh.mp4')">
+                ▶ Watch Trailer
+            </button>
+        </div>
+
+    </section>
+
+    <!-- Video Popup -->
+    <div class="popup" id="popup">
+        <div class="popup-content">
+            <span class="close" onclick="closeVideo()">&times;</span>
+            <video id="moviePlayer" width="900" controls autoplay>
+                <source id="movieSource" src="" type="video/mp4">
+                Your browser does not support HTML5 video.
+            </video>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <h2>🎬 MovieFlix</h2>
+        <p>Movie Trailer Streaming Website using AWS EC2 + Amazon S3</p>
+        <p>Developed by Om</p>
+    </footer>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
